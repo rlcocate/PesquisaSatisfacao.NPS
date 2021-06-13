@@ -21,7 +21,7 @@ namespace PesquisaSatisfacao.NPS.WebApi
         {
             services.AddControllers();
 
-            ContainerBuilder._services = services;
+            ContainerBuilder.Services = services;
             ContainerBuilder.InfrasctrutureRegister();
             ContainerBuilder.ApplicationRegister();
             ContainerBuilder.DomainRegister();

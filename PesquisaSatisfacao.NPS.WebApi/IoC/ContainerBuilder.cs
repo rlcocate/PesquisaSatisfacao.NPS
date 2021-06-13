@@ -11,22 +11,22 @@ namespace PesquisaSatisfacao.NPS.WebApi.IoC
 {
     public static class ContainerBuilder
     {
-        public static IServiceCollection _services { get; set; }
+        public static IServiceCollection Services { get; set; }
 
         public static void ApplicationRegister()
         {
-            _services.AddTransient<IPesquisaApp, PesquisaApp>();
+            Services.AddTransient<IPesquisaApp, PesquisaApp>();
         }
 
         public static void DomainRegister()
         {
-            _services.AddTransient<IPesquisaRepository, PesquisaRepository>();
+            Services.AddTransient<IPesquisaRepository, PesquisaRepository>();
         }
 
         public static void InfrasctrutureRegister()
         {
-            _services.AddScoped<DataContext>();
-            _services.AddTransient<IUnitOfWork, UnitOfWork>();
+            Services.AddScoped<DataContext>();
+            Services.AddTransient<IUnitOfWork, UnitOfWork>();
         }
     }
 }
